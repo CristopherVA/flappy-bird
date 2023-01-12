@@ -39,8 +39,8 @@ const state = {
 
 // START BUTTON COORD ------------------------------------------------------------
 const startBtn = {
-  x: 120,
-  y: 263,
+  x: 260,
+  y: 556,
   w: 83,
   h: 29
 }
@@ -62,6 +62,7 @@ document.addEventListener("click", function (evt) {
       let clickY = evt.clientY - rect.top;
 
       // CHECK IF WE CLICK ON THE START BUTTON
+      console.log(clickX >= startBtn.x && clickX <= startBtn.x + startBtn.w && clickY >= startBtn.y && clickY <= startBtn.y + startBtn.h)
       if (clickX >= startBtn.x && clickX <= startBtn.x + startBtn.w && clickY >= startBtn.y && clickY <= startBtn.y + startBtn.h) {
         pipes.reset();
         bird.speedReset()
